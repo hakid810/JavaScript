@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+    <script src = "MlabHelper.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body mg-controller="ctr_memo" mg-app="app_mono">
+
+    <div class="container">
+        <div class="row">
+            <div class="vol-md-6">
+                <div class="jumbotron">
+                    <h1>
+                        Keep{{addComment}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="vol-md-6">
+                <form class="form-horizontal">
+                    <div class="form-group form-group-md">
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" id="search_id">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control" type="button" onclick="deleteMlabColl()" value="delete">
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="vol-md-6">
+                <label>title:</label>
+                <input class="form-control" type="text" id="selected_id">
+                <input class="form-control" type="text" id="title_id" style="display: none">
+            </div>
+        </div>
+        <div class="row">
+            <div class="vol-md-6">
+                <textarea class="form-control" rows="5" cols="50" id="contents_id"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="vol-md-6">
+                <input class="form-control" type="button" onclick="insertMlabColl()" value="insert" >
+                <input class="form-control" type="button" onclick="searchMlabColl()" value="search">
+                <input class="form-control" type="button" onclick="updateMlabColl()" value="update">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <table>
+        <div id="dynamicTable"></div>
+    </table>
+<script src="test.angulerjs.js"></script>
+<script src = "test.js"></script>
+</body>
+</html>
